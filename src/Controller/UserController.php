@@ -33,7 +33,7 @@ class UserController extends AbstractController
      * @return Response
      */
     public function getOne(int $id, UserRepository $repository){
-        return new Response($repository->find($id));
+        return new Response(json_encode($repository->find($id)));
     }
 
     /**
